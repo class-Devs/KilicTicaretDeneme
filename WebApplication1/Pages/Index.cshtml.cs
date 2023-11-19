@@ -25,6 +25,18 @@ public class IndexModel : PageModel
         {
             new ProductModel { Name = "Ürün 1", Description = "Ürün 1 Açıklaması", Price = 10.99m, ImageUrl = "path-to-product-1.jpg" },
             new ProductModel { Name = "Ürün 2", Description = "Ürün 2 Açıklaması", Price = 19.99m, ImageUrl = "path-to-product-2.jpg" },
+            new ProductModel { Name = "Ürün 1", Description = "Ürün 1 Açıklaması", Price = 10.99m, ImageUrl = "path-to-product-1.jpg" },
+            new ProductModel { Name = "Ürün 2", Description = "Ürün 2 Açıklaması", Price = 19.99m, ImageUrl = "path-to-product-2.jpg" },
+            new ProductModel { Name = "Ürün 1", Description = "Ürün 1 Açıklaması", Price = 10.99m, ImageUrl = "path-to-product-1.jpg" },
+            new ProductModel { Name = "Ürün 2", Description = "Ürün 2 Açıklaması", Price = 19.99m, ImageUrl = "path-to-product-2.jpg" },
+            new ProductModel { Name = "Ürün 1", Description = "Ürün 1 Açıklaması", Price = 10.99m, ImageUrl = "path-to-product-1.jpg" },
+            new ProductModel { Name = "Ürün 2", Description = "Ürün 2 Açıklaması", Price = 19.99m, ImageUrl = "path-to-product-2.jpg" },
+            new ProductModel { Name = "Ürün 1", Description = "Ürün 1 Açıklaması", Price = 10.99m, ImageUrl = "path-to-product-1.jpg" },
+            new ProductModel { Name = "Ürün 2", Description = "Ürün 2 Açıklaması", Price = 19.99m, ImageUrl = "path-to-product-2.jpg" },
+            new ProductModel { Name = "Ürün 1", Description = "Ürün 1 Açıklaması", Price = 10.99m, ImageUrl = "path-to-product-1.jpg" },
+            new ProductModel { Name = "Ürün 2", Description = "Ürün 2 Açıklaması", Price = 19.99m, ImageUrl = "path-to-product-2.jpg" },
+            new ProductModel { Name = "Ürün 1", Description = "Ürün 1 Açıklaması", Price = 10.99m, ImageUrl = "path-to-product-1.jpg" },
+            new ProductModel { Name = "Ürün 2", Description = "Ürün 2 Açıklaması", Price = 19.99m, ImageUrl = "path-to-product-2.jpg" },
             // Diğer ürünleri ekleyin
         };
     }
