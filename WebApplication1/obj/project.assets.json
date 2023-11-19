@@ -8,25 +8,25 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\muazf\\.nuget\\packages\\": {}
+    "/Users/davutarslan/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "/Users/davutarslan/Documents/GitHub/KilicTicaretDeneme/WebApplication1/WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\muazf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\obj\\",
+      "projectPath": "/Users/davutarslan/Documents/GitHub/KilicTicaretDeneme/WebApplication1/WebApplication1.csproj",
+      "packagesPath": "/Users/davutarslan/.nuget/packages/",
+      "outputPath": "/Users/davutarslan/Documents/GitHub/KilicTicaretDeneme/WebApplication1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\muazf\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/davutarslan/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Users\\muazf\\.dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "/usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -63,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\muazf\\.dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
       }
     }
   }
