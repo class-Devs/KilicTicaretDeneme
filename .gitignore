@@ -4,3 +4,8 @@
 *.json
 *.props
 *.cache
+*.dll
+*.pdb
+*.json
+*.props
+*.cache
