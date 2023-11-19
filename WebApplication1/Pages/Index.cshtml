@@ -1,10 +1,52 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Gıda Market";
 }
 
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .jumbotron {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+</style>
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Hoş Geldiniz, KILIÇ TİCARET Gıda Market</h1>
+    <p class="lead">En taze ve kaliteli gıda ürünlerini bulabileceğiniz adres!</p>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        @foreach (var product in Model.Products)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Description</p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text">Fiyat: $@product.Price</p>
+                        <a href="#" class="btn btn-primary btn-block">Sepete Ekle</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
