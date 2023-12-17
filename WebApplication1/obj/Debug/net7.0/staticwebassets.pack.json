@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\WebApplication1.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\css\\carts.css",
+      "PackagePath": "staticwebassets\\css\\carts.css"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\js\\carts.js",
+      "PackagePath": "staticwebassets\\js\\carts.js"
     },
     {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\js\\site.js",

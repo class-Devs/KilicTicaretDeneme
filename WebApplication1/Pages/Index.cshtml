@@ -4,37 +4,7 @@
     ViewData["Title"] = "Gıda Market";
 }
 
-<style>
-    body {
-        background-color: #f8f9fa;
-    }
-
-    .card {
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        transition: transform 0.2s;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-    }
-
-    .product-image {
-        max-height: 200px;
-        object-fit: cover;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-
-    .card-footer {
-        background-color: #f8f9fa;
-    }
-
-    .price-tag {
-        color: #28a745;
-        font-weight: bold;
-    }
-</style>
+<link rel="stylesheet" href="~/css/index.css" />
 
 <div class="text-center">
     <h1 class="display-4">Hoş Geldiniz, KILIÇ TİCARET Gıda Market</h1>
@@ -47,10 +17,10 @@
         {
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="@product.ImageUrl" class="card-img-top product-image" alt="@product.Name">
+                    <img src="@product.Id" class="card-img-top product-image" alt="@product.Name">
                     <div class="card-body">
                         <h5 class="card-title">@product.Name</h5>
-                        <p class="card-text">@product.Description</p>
+                        <p class="card-text">@product.Name</p>
                     </div>
                     <div class="card-footer">
                         <p class="card-text price-tag">Fiyat: $@product.Price</p>
