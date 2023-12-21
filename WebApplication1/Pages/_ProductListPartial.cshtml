@@ -1,0 +1,17 @@
+@model WebApplication1.Model.PaginatedList<WebApplication1.Model.Product>
+
+@foreach (var product in Model)
+{
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 clickable-card" onclick="location.href='@Url.Page("ProductDetails", new { productId = product.Id })'">
+            <div class="card-body">
+                <h5 class="card-title">@product.Name</h5>
+                <p class="card-text">@product.Id</p>
+            </div>
+            <div class="card-footer">
+                <p class="card-text price-tag">Fiyat: $@product.Price</p>
+                <a href="#" class="btn btn-success btn-block">Sepete Ekle</a>
+            </div>
+        </div>
+    </div>
+}

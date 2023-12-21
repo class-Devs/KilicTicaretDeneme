@@ -14,3 +14,41 @@ header {
 .clickable-card {
     cursor: pointer;
 }
+
+/* wwwroot/css/site.css */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #fb8d51;
+    border: 1px solid #fb8d51;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover,
+.pagination a.active {
+    background-color: #fb8d51;
+    color: #fff;
+}
+
+.pagination-container {
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* Add this to your CSS file */
+.page-link.smaller {
+    font-size: 12px; /* Adjust the font size as needed */
+}
+
+.pagination {
+    margin-top: 20px; /* Adjust the top margin as needed */
+    margin-bottom: 20px; /* Adjust the bottom margin as needed */
+}

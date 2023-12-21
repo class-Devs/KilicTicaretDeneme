@@ -24,7 +24,32 @@ body {
 }
 
 .price-tag {
-    color: #28a745;
+    color: #ffffff;
     font-weight: bold;
 }
 
+.navbar-brand img {
+    width: 200px;
+    height: auto;
+}
+
+.price-tag {
+    color: #fb8d51; /* Fiyat yazısının rengi */
+}
+
+.btn-success {
+    background-color: #fb8d51; /* "Sepete Ekle" butonunun arka plan rengi */
+    color: #ffffff; /* "Sepete Ekle" butonunun metin rengi */
+    border-color: #ffffff; /* "Sepete Ekle" butonunun kenarlık rengi */
+}
+
+.btn-success:hover {
+    background-color: #ffffff; /* Mouse ile üstüne gelindiğinde "Sepete Ekle" butonunun arka plan rengi */
+    color: #fb8d51; /* Mouse ile üstüne gelindiğinde "Sepete Ekle" butonunun metin rengi */
+    border-color: #fb8d51; /* Mouse ile üstüne gelindiğinde "Sepete Ekle" butonunun kenarlık rengi */
+}
+
+.spinner-container {
+    margin-top: 30px; /* veya istediğiniz değeri kullanabilirsiniz */
+    margin-bottom: 30px;
+}

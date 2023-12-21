@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\js\\carts.js"
     },
     {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\js\\infinite-scroll.js",
+      "PackagePath": "staticwebassets\\js\\infinite-scroll.js"
+    },
+    {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\js\\search.js",
       "PackagePath": "staticwebassets\\js\\search.js"
     },
@@ -259,6 +263,18 @@
     {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\logo1.PNG",
+      "PackagePath": "staticwebassets\\logo1.PNG"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\logo2.PNG",
+      "PackagePath": "staticwebassets\\logo2.PNG"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\logo3.png",
+      "PackagePath": "staticwebassets\\logo3.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props",
