@@ -4,7 +4,7 @@
     ViewData["Title"] = "Gıda Market";
 }
 
-<link rel="stylesheet" href="~/css/index.css" />
+<link rel="stylesheet" href="~/css/index.css"/>
 
 <div class="text-center">
     <h1 class="display-4">Hoş Geldiniz, KILIÇ TİCARET Gıda Market</h1>
@@ -16,11 +16,12 @@
         @foreach (var product in Model.Products)
         {
             <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="@product.Id" class="card-img-top product-image" alt="@product.Name">
+                <div class="card h-100 clickable-card">
+                @* <div class="card h-100 clickable-card" onclick="location.href='@Url.Action("Details", "Product", new { id = product.Id })';"> *@
+                    @* <img src="@product.Id" class="card-img-top product-image" alt="@product.Name"> *@
                     <div class="card-body">
                         <h5 class="card-title">@product.Name</h5>
-                        <p class="card-text">@product.Name</p>
+                        <p class="card-text">@product.Id</p>
                     </div>
                     <div class="card-footer">
                         <p class="card-text price-tag">Fiyat: $@product.Price</p>

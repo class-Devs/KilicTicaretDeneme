@@ -17,4 +17,19 @@ public class ProductController : Controller
         var products = _context.Products.ToList();
         return View(products);
     }
+    
+    // public IActionResult Details(int id)
+    // {
+    //     var product = _context.Products.FirstOrDefault(p => p.Id == id);
+    //
+    //     if (product == null)
+    //     {
+    //         return NotFound(); // 404 Not Found sayfasına yönlendirme
+    //     }
+    //
+    //     return View(product);
+    // }
+    
+    
+
 }

@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\js\\carts.js"
     },
     {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\js\\search.js",
+      "PackagePath": "staticwebassets\\js\\search.js"
+    },
+    {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

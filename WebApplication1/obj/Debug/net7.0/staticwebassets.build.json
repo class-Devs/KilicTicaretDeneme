@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yS7LTfWkobZSRYpz9WfxmFKcbn/miGlhlTJG1WBx8L4=",
+  "Hash": "Ji/3T1WYjzv+xTbRSeLUQ6T2DkLXBLplFfIH0yrsDbQ=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\carts.js"
+    },
+    {
+      "Identity": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\js\\search.js",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "js/search.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\search.js"
     },
     {
       "Identity": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\js\\site.js",
