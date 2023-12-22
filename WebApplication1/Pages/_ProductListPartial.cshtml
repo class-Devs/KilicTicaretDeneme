@@ -3,7 +3,7 @@
 @foreach (var product in Model)
 {
     <div class="col-md-4 mb-4">
-        <div class="card h-100 clickable-card" onclick="location.href='@Url.Page("ProductDetails", new { productId = product.Id })'">
+        <div class="card h-100 clickable-card" onclick="location.href='@Url.Page("/Details", new { productId = product.Id })'">
             <div class="card-body">
                 <h5 class="card-title">@product.Name</h5>
                 <p class="card-text">@product.Id</p>

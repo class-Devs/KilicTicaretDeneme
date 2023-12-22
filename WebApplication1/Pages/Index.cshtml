@@ -17,22 +17,7 @@
 
 <div class="container mt-4">
     <div class="row" id="product-container">
-        @* @foreach (var product in Model.PaginatedProducts) *@
-        @* { *@
         @await Html.PartialAsync("_ProductListPartial", Model.PaginatedProducts)
-        @* <div class="col-md-4 mb-4"> *@
-        @*     <div class="card h-100 clickable-card" onclick="location.href='@Url.Page("ProductDetails", new { productId = product.Id })'"> *@
-        @*         <div class="card-body"> *@
-        @*             <h5 class="card-title">@product.Name</h5> *@
-        @*             <p class="card-text">@product.Id</p> *@
-        @*         </div> *@
-        @*         <div class="card-footer"> *@
-        @*             <p class="card-text price-tag">Fiyat: $@product.Price</p> *@
-        @*             <a href="#" class="btn btn-success btn-block">Sepete Ekle</a> *@
-        @*         </div> *@
-        @*     </div> *@
-        @* </div> *@
-        @* } *@
     </div>
     <input type="hidden" id="currentPage" value="@(Model.PaginatedProducts.PageIndex)" />
     <div class="text-center spinner-container">
@@ -40,25 +25,5 @@
         <span class="sr-only"></span>
       </div>
     </div>
-    @* <div class="container mt-5"> <!-- Add margin-top to the container --> *@
-    @*     <div class="row"> *@
-    @*         <!-- Your existing content here --> *@
-    @*     </div> *@
-    @* *@
-    @*     <div class="pagination mt-3 mb-5"> <!-- Add margin-top and margin-bottom to the pagination --> *@
-    @*         @if (Model.PaginatedProducts.HasPreviousPage) *@
-    @*         { *@
-    @*             <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex - 1)" class="page-link smaller">Geri</a> *@
-    @*         } *@
-    @*         @for (var i = 1; i <= Model.PaginatedProducts.TotalPages; i++) *@
-    @*         { *@
-    @*             <a asp-page="./Index" asp-route-pageIndex="@i" class="page-link smaller @(i == Model.PaginatedProducts.PageIndex ? "active" : "")">@i</a> *@
-    @*         } *@
-    @*         @if (Model.PaginatedProducts.HasNextPage) *@
-    @*         { *@
-    @*             <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex + 1)" class="page-link smaller">İleri</a> *@
-    @*         } *@
-    @*     </div> *@
-    @* </div> *@
 </div>
 

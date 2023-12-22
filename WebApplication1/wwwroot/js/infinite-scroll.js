@@ -4,7 +4,6 @@ $(document).ready(function () {
 
     var totalPagesString = document.getElementById('totalPages').getAttribute('data-totalPages');
     var totalPages = parseInt(totalPagesString, 10)
-    console.log(totalPages);
 
     $(window).scroll(function () {
         if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100 && !isLoading && currentPage < totalPages) {
@@ -16,7 +15,6 @@ $(document).ready(function () {
             // 0.5 saniye gecikme sonunda AJAX isteğini gerçekleştir
             setTimeout(function () {
                 currentPage++;
-                console.log(currentPage)
 
                 $.ajax({
                     url: '/Index?handler=OnGet&pageIndex=' + currentPage,
