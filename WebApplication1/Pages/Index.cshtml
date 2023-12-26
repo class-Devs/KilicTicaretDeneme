@@ -1,19 +1,21 @@
 ﻿@page
 @model IndexModel
 @{
+    Layout = "_Layout";
     ViewData["Title"] = "Gıda Market";
 }
+
+
+<link rel="stylesheet" href="~/css/index.css"/>
+
+<div class="image-container">
+    <img src="~/store2.JPG" alt="Store Image" class="img-fluid" />
+</div>
+
 <div id="totalPages" data-totalPages="@Model.PaginatedProducts.TotalPages"></div>
 <script>
     var totalPages = document.getElementById('totalPages').getAttribute('data-totalPages');
 </script>  
-
-<link rel="stylesheet" href="~/css/index.css"/>
-
-<div class="text-center">
-    <h1 class="display-4">Hoş Geldiniz, KILIÇ TİCARET Gıda Market</h1>
-    <p class="lead">En taze ve kaliteli gıda ürünlerini bulabileceğiniz adres!</p>
-</div>
 
 <div class="container mt-4">
     <div class="row" id="product-container">

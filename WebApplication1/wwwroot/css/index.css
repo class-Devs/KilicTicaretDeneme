@@ -1,55 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    background-color: #f8f9fa;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*width: 100%;*/
+    /*height: 100vh;*/
+    background: #f8f9fa;
 }
 
-.card {
-    border: 1px solid #ddd;
+.item-container {
+    background-color: #fff;
+    width: 20rem;
+    margin: 1rem auto; /* Auto margin ile yatayda ortala */
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-item {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    justify-content: center;
+    transition: transform 0.3s
+}
+
+.main-item img {
+    max-width: 100%; /* Resmin maksimum genişliği 100% olsun, taşmaları engelleyin */
+    height: auto; /* Resmin oranlarını koruyun */
     border-radius: 10px;
-    transition: transform 0.2s;
 }
 
-.card:hover {
+.item-container:hover .main-item {
     transform: scale(1.05);
 }
 
-.product-image {
-    max-height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.item-heading {
+    text-transform: capitalize;
 }
 
-.card-footer {
-    background-color: #f8f9fa;
+.item-description {
+    margin: .5rem 0;
+    font-size: .9rem;
+    font-weight: 200;
 }
 
-.price-tag {
-    color: #ffffff;
+.item-price {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.item-cart-btn {
+    border: none;
+    background-color: transparent;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px;
     font-weight: bold;
+    padding: .5rem 1rem;
+    background-color: #fba373;
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s linear;
 }
 
-.navbar-brand img {
-    width: 200px;
-    height: auto;
-}
-
-.price-tag {
-    color: #fb8d51; /* Fiyat yazısının rengi */
-}
-
-.btn-success {
-    background-color: #fb8d51; /* "Sepete Ekle" butonunun arka plan rengi */
-    color: #ffffff; /* "Sepete Ekle" butonunun metin rengi */
-    border-color: #ffffff; /* "Sepete Ekle" butonunun kenarlık rengi */
-}
-
-.btn-success:hover {
-    background-color: #ffffff; /* Mouse ile üstüne gelindiğinde "Sepete Ekle" butonunun arka plan rengi */
-    color: #fb8d51; /* Mouse ile üstüne gelindiğinde "Sepete Ekle" butonunun metin rengi */
-    border-color: #fb8d51; /* Mouse ile üstüne gelindiğinde "Sepete Ekle" butonunun kenarlık rengi */
+.item-cart-btn:hover {
+    color: #fff;
+    background-color: #e17e48;
 }
 
 .spinner-container {
     margin-top: 30px; /* veya istediğiniz değeri kullanabilirsiniz */
     margin-bottom: 30px;
+}
+
+.image-container {
+    max-width: calc(100% - 14px); /* 8px sağ ve 8px sol boşluk */
+    margin-right: 7px;
+    margin-left: 7px;
+    overflow: hidden;
+    /*opacity: 0.90;*/
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    border-radius: 25px;
 }

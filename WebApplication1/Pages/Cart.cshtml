@@ -1,0 +1,187 @@
+@page
+@model WebApplication1.Pages.CartModel
+
+@{
+    Layout = "_Layout";
+}
+
+<link rel="stylesheet" href="~/css/cart.css"/>
+
+<section class="h-100 h-custom">
+    <div class="container h-100 py-5">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="h5">Sepetim</th>
+                            <th scope="col">Kg / Adet Fiyatı</th>
+                            <th scope="col">Kg / Adet</th>
+                            <th scope="col">Fiyat</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var product in @Model.CartItems)
+                        {
+                            <tr>
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                        <img src="~/kayisi.PNG" class="img-fluid rounded-3" style="width: 120px;" alt="Book">
+                                        <div class="flex-column ms-4">
+                                            <p class="mb-2">@product.Name</p>
+                                            @* <p class="mb-0">Daniel Kahneman</p> *@
+                                        </div>
+                                    </div>
+                                </th>
+                                <td class="align-middle">
+                                    <p class="mb-0" style="font-weight: 500;">@product.Price TL</p>
+                                </td>
+                                <td class="align-middle">
+                                    <div class="d-flex flex-row">
+                                        <button class="btn btn-link px-2" onclick="updateQuantity(this, -1, @product.Id, @product.Price)">
+                                            <i class="bi bi-dash-square"></i>
+                                        </button>
+                                
+                                        <input min="0" name="quantity" value="@product.Count" type="number"
+                                               class="form-control form-control-sm" style="width: 50px;"
+                                               onchange="updateTotal(this, @product.Count)"/>
+                                
+                                        <button class="btn btn-link px-2" onclick="updateQuantity(this, 1, @product.Id, @product.Price)">
+                                            <i class="bi bi-plus-square"></i>
+                                        </button>
+                                    </div>
+                                </td>
+
+                                <td class="align-middle" style="width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                    <div class="d-flex flex-column">
+                                                        <p class="mb-0" style="font-weight: 500;"><span id="totalPricePerUnit_@product.Id">@product.TotalPrice</span> TL</p>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card shadow-2-strong mb-5 mb-lg-0" style="border-radius: 16px;">
+                    <div class="card-body p-4">
+
+                        <div class="row">
+                            </div>
+                            <div class="col-lg-4 col-xl-3">
+                                <div class="d-flex justify-content-between" style="font-weight: 500;">
+                                    <p class="mb-2" id="subtotalLabel">Ara Toplam</p>
+                                    <p class="mb-2" id="subtotalValue"><span id="subtotal"></span> TL</p>
+                                </div>
+
+                                <div class="d-flex justify-content-between" style="font-weight: 500;">
+                                    <p class="mb-0" id="shippingCostLabel">Kargo Ücreti</p>
+                                    <p class="mb-0" id="shippingCostValue"><span id="shippingCost">20</span> TL</p>
+                                </div>
+
+                                <hr class="my-4">
+
+                                <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
+                                    <p class="mb-2" id="totalLabel">Toplam Fiyat</p>
+                                    <p class="mb-2" id="totalValue"><span id="total"></span> TL</p>
+                                </div>
+
+                                <button type="button" class="btn btn-primary btn-block btn-lg">
+                                    <div class="d-flex justify-content-between">
+                                        Sepeti Onayla
+                                        <span id="subtotal-button"></span>
+                                    </div>
+                                </button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        updateSubtotal();
+    });
+
+     function updateQuantity(button, change, id, price) {
+         var input = button.parentElement.querySelector('input[name="quantity"]');
+         var initialCount = parseInt(input.value);
+         var newValue = initialCount + change;
+     
+         if (newValue > 0) {
+             input.value = newValue;
+             updateTotal(id, newValue, price);
+             updateCookie(id, newValue);
+         } else {
+             removeItemFromCookieWithDelay(id, button);
+         }
+     }
+     
+     function removeItemFromCookieWithDelay(productId, button) {
+         // Introduce a delay before removing the item
+         setTimeout(function () {
+             removeItemFromCookie(productId);
+             button.closest('tr').remove();
+             updateSubtotal();
+         }, 200); // 200 milliseconds (0.2 seconds)
+     }
+     
+     function updateCookie(productId, newCount) {
+        var existingCookie = JSON.parse(getCookie("cart_items")) || [];
+        var index = existingCookie.findIndex(item => item.productId == productId);
+     
+        if (index !== -1) {
+            existingCookie[index].count = newCount;
+        } else {
+            existingCookie.push({ productId: productId, count: newCount });
+        }
+     
+        document.cookie = "cart_items=" + JSON.stringify(existingCookie);
+     }
+     
+     function removeItemFromCookie(productId) {
+             var existingCookie = JSON.parse(getCookie("cart_items")) || [];
+             var index = existingCookie.findIndex(item => item.productId == productId);
+     
+             if (index !== -1) {
+                 existingCookie.splice(index, 1); // Remove the item from the array
+                 document.cookie = "cart_items=" + JSON.stringify(existingCookie);
+             }
+         }
+     
+     function updateTotal(productId, newCount, price) {
+         var totalPrice = newCount * price;
+         var priceElement = document.querySelector('#totalPricePerUnit_' + productId);
+         priceElement.innerText = totalPrice;
+         
+         updateSubtotal();
+     }
+     
+     function updateSubtotal() {
+        var subtotal = 0;
+        var productRows = document.querySelectorAll('.table tbody tr');
+        productRows.forEach(function (row) {
+            var productId = row.querySelector('input[name="quantity"]').getAttribute('data-product-id');
+            var price = parseFloat(row.querySelector('.align-middle p').innerText);
+            var quantity = parseInt(row.querySelector('input[name="quantity"]').value);
+            subtotal += quantity * price;
+        });
+         
+        document.getElementById('subtotal').innerText = subtotal.toFixed(2);
+        document.getElementById('subtotal-button').innerText = subtotal.toFixed(2);
+     }
+     
+     function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length === 2) return parts.pop().split(";").shift();
+     }
+</script>

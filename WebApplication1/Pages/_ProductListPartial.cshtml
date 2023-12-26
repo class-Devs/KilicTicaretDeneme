@@ -1,17 +1,87 @@
 @model WebApplication1.Model.PaginatedList<WebApplication1.Model.Product>
 
+<link rel="stylesheet" href="~/css/cards.css">
+<script src="~/js/infinite-scroll.js" asp-append-version="true"></script>
+
 @foreach (var product in Model)
 {
-    <div class="col-md-4 mb-4">
-        <div class="card h-100 clickable-card" onclick="location.href='@Url.Page("/Details", new { productId = product.Id })'">
-            <div class="card-body">
-                <h5 class="card-title">@product.Name</h5>
-                <p class="card-text">@product.Id</p>
+    <div class="item-container">
+        <div onclick="location.href='@Url.Page("/Details", new { productId = product.Id })'">
+            <div class="main-item">
+                <img src="~/kayisi.png" alt="">
             </div>
-            <div class="card-footer">
-                <p class="card-text price-tag">Fiyat: $@product.Price</p>
-                <a href="#" class="btn btn-success btn-block">Sepete Ekle</a>
-            </div>
+
+            <h2 class="item-heading">
+                @product.Name
+            </h2>
+            <p class="item-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit labore quae quaerat eaque.
+            </p>
+            <p class="item-price">
+                @product.Price
+            </p>
         </div>
+        <button class="item-cart-btn" onclick="addToCart('@product.Id')">Sepete Ekle</button>
     </div>
 }
+
+<script>
+    function addToCart(productId) {
+        // Sepet bilgilerini al
+        var cart = getCart();
+
+        // Eğer ürün sepette varsa sadece miktarını arttır, yoksa yeni bir öğe olarak ekle
+        var existingProduct = cart.find(item => item.productId === productId);
+        if (existingProduct) {
+            existingProduct.count += 1;
+        } else {
+            cart.push({ productId: productId, count: 1 });
+        }
+
+        // Sepet bilgilerini cookie'e kaydet
+        setCart(cart);
+
+        // İsteğe bağlı olarak kullanıcıya bilgi ver
+        alert('Ürün sepete eklendi!');
+        location.reload()
+    }
+
+    function getCart() {
+        // Cookie'den sepet bilgilerini al
+        var cart = getCookie('cart_items');
+        if (!cart) {
+            cart = [];
+        } else {
+            try {
+                cart = JSON.parse(cart);
+            } catch (error) {
+                // Cookie'deki veri JSON formatında değilse boş bir dizi oluştur
+                cart = [];
+            }
+        }
+        return cart;
+    }
+
+    function setCart(cart) {
+        // Cookie'ye sepet bilgilerini kaydet
+        setCookie('cart_items', JSON.stringify(cart), 7); // 7 gün süreyle geçerli bir cookie
+    }
+
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length === 2) return parts.pop().split(";")[0];
+    }
+
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        var newCookie = name + "=" + (value || "") + expires + ";path=/";
+        console.log(newCookie);
+        document.cookie = newCookie;
+    }
+</script>

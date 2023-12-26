@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\WebApplication1.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\css\\carts.css",
-      "PackagePath": "staticwebassets\\css\\carts.css"
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\css\\cards.css",
+      "PackagePath": "staticwebassets\\css\\cards.css"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\css\\details.css",
+      "PackagePath": "staticwebassets\\css\\details.css"
     },
     {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\css\\index.css",
@@ -19,6 +27,10 @@
     {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\image.jpg",
+      "PackagePath": "staticwebassets\\image.jpg"
     },
     {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\js\\carts.js",
@@ -35,6 +47,10 @@
     {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\kayisi.PNG",
+      "PackagePath": "staticwebassets\\kayisi.PNG"
     },
     {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -275,6 +291,22 @@
     {
       "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\logo3.png",
       "PackagePath": "staticwebassets\\logo3.png"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\logo4.jpg",
+      "PackagePath": "staticwebassets\\logo4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\logo5.jpg",
+      "PackagePath": "staticwebassets\\logo5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\store.jpg",
+      "PackagePath": "staticwebassets\\store.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muazf\\OneDrive\\Masaüstü\\KilicTicaret\\KilicTicaretDeneme\\WebApplication1\\wwwroot\\store2.jpg",
+      "PackagePath": "staticwebassets\\store2.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props",

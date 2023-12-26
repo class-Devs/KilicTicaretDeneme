@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+}
+
+.item-container {
+    background-color: #fff;
+    width: 60rem;
+    height: 30rem;
+    margin: 6rem auto; /* Yukarıdan 2rem boşluk bırak */
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main-item {
+    flex: 0 0 auto; /* Genişlemesine izin verme, daraltma ve başlangıç genişliğini kullanma */
+    display: flex;
+    justify-content: flex-start; /* Resmi en sola yasla */
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.main-item img {
+    width: auto;
+    height: 100%;
+    object-fit: contain; /* Resmi sıkıştırmadan, oranları koruyarak göster */
+    border-radius: 10px;
+}
+
+
+.description {
+    flex-grow: 1; /* Allow flex container to grow and take up available space */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Boşluk eklemek istediğiniz miktarı ayarlayın */
+}
+
+.item-heading {
+    text-transform: capitalize;
+    font-size: 1.7rem; /* İstenilen büyüklük */
+    font-weight: bold; /* Kalınlık */
+    text-align: center; /* Ortalama */
+    margin-top: 0; /* Üst boşluk sıfırlandı */
+}
+
+.item-price {
+    text-align: left; /* Metni sola yasla */
+    font-size: 2rem;
+    margin: 1rem 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.item-description {
+    margin-top: 3rem; /* Üstten 2rem boşluk */
+    margin-bottom: 3rem;
+    margin-left: 50px; /* Soldan 50px boşluk */
+    margin-right: 50px; /* Sağdan 50px boşluk */
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.item-cart-btn {
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    margin-left: auto;
+    bottom: 150px;
+    width: 50%;
+    border: 1px;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    background-color: #fba373;
+    color: #fff;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.item-cart-btn:hover {
+    color: #fff;
+    background-color: #e17e48;
+}

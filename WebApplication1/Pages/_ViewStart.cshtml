@@ -2,15 +2,15 @@
     Layout = "_Layout";
 }
 
-@{
-    // "Index" sayfası için model tanımı
-    var indexModel = typeof(WebApplication1.Pages.IndexModel).FullName;
-
-    // Sayfa adını al
-    var pageName = Context.Request.RouteValues["page"] as string;
-
-    // Eğer sayfa adı "Index" ise, varsayılan model "IndexModel" olacak
-    var defaultModel = pageName == "Index" ? indexModel : null;
-}
-
-@model dynamic
+@* @{ *@
+@*     // "Index" sayfası için model tanımı *@
+@*     var indexModel = typeof(WebApplication1.Pages.IndexModel).FullName; *@
+@* *@
+@*     // Sayfa adını al *@
+@*     var pageName = Context.Request.RouteValues["page"] as string; *@
+@* *@
+@*     // Eğer sayfa adı "Index" ise, varsayılan model "IndexModel" olacak *@
+@*     var defaultModel = pageName == "Index" ? indexModel : null; *@
+@* } *@
+@* *@
+@* @model dynamic *@

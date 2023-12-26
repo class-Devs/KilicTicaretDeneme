@@ -1,7 +1,30 @@
 @page "{productId:int}"
-@model WebApplication1.Pages.DetailsModel
+@model DetailsModel
 
-<div class="container mt-4">
-    <h1 class="display-4">@Model.Product.Name Detayları</h1>
-    <p class="lead">@Model.Product.Price</p>
+<head>
+    @{
+        Layout = "_Layout";
+    }
+</head>
+<link rel="stylesheet" href="~/css/details.css"/>
+
+<body>
+<div class="item-container">
+    <div class="main-item">
+        <img src="~/kayisi.png" alt="">
+    </div>
+
+    <div class="description">
+        <h2 class="item-heading">
+            @Model.Product.Name - Kuru Kayısı
+        </h2>
+        <p class="item-price">
+            @Model.Product.Price TL
+        </p>
+        <p class="item-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit labore quae quaerat eaque.dasdadasdsadasdas
+        </p>
+        <button class="item-cart-btn">Sepete Ekle</button>
+    </div>
 </div>
+</body>

@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\muazf\OneDrive\Masaüstü\KilicTicaret\KilicTicaretDeneme\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/muazf/OneDrive/Masaüstü/KilicTicaret/KilicTicaretDeneme/WebApplication1/Pages/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/muazf/OneDrive/Masaüstü/KilicTicaret/KilicTicaretDeneme/WebApplication1/Pages/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

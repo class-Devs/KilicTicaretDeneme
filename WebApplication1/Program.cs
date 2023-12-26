@@ -10,6 +10,7 @@ namespace WebApplication1
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddRazorPages();
+            
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -26,6 +27,9 @@ namespace WebApplication1
             }
 
             app.UseHttpsRedirection();
+            
+            // app.UseCookiePolicy();
+            
             app.UseStaticFiles();
 
             app.UseRouting();
